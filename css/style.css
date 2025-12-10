@@ -1295,3 +1295,116 @@ body.theme-transition * {
   font-weight: 600;
   color: #4a301b;
 }
+
+/* =========================================
+   📱 MOBILE RESPONSIVE ADD-ONS
+   (Tambahkan ini di baris paling bawah CSS)
+   ========================================= */
+
+@media only screen and (max-width: 768px) {
+
+  /* 1. HEADER LEBIH COMPACT */
+  .site-header {
+    padding: 10px 14px;
+    gap: 10px;
+    flex-wrap: wrap; /* Biar tidak gepeng kalau layar kecil banget */
+  }
+
+  .site-header h1 {
+    font-size: 1rem; /* Judul lebih kecil */
+  }
+  
+  .brand-img {
+    width: 40px;
+    height: 40px; /* Logo diperkecil dikit */
+  }
+  
+  .subtitle {
+    display: none; /* Sembunyikan subtitle di HP biar hemat tempat */
+  }
+
+  .header-controls .btn {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+  }
+
+  /* 2. SIDEBAR (PANEL KIRI) AGAR TIDAK MENUTUPI FULL PETA */
+  .sidebar {
+    width: 92% !important; /* Lebar hampir full */
+    left: 4% !important; /* Posisi tengah */
+    top: auto !important; 
+    bottom: 20px; /* Pindah ke bawah layar (seperti Google Maps) */
+    height: 45vh; /* Hanya setengah layar tinggi-nya */
+    border-radius: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Kalau sidebar ditutup, sembunyikan ke bawah */
+  .sidebar.closed {
+    transform: translateY(120%) !important; /* Geser ke bawah layar */
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* 3. POPUP FORM & KARTU AGAR TIDAK KELEBARAN */
+  .form-popup {
+    width: 90%; /* Mengikuti lebar layar HP */
+    max-width: 320px;
+    padding: 15px;
+  }
+  
+  .popup-card {
+    width: 200px; /* Card di peta sedikit lebih ramping */
+  }
+  
+  .popup-image {
+    height: 100px; /* Gambar dipendekkan dikit */
+  }
+
+  /* 4. TOMBOL-TOMBOL LEBIH MUDAH DITEKAN JEMPOL */
+  .theme-toggle-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    top: 80px; /* Turunkan dikit biar gak ketutup header */
+    right: 10px;
+  }
+
+  /* 5. SEARCH RESULT DIBUAT LEBIH RAPI */
+  .search-result {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  /* 6. MODAL DETAIL & ALERT */
+  .alert-toast {
+    width: 85%;
+    font-size: 14px;
+    padding: 12px 20px;
+    text-align: center;
+  }
+
+  /* SweetAlert (Library Popup) Fix */
+  div:where(.swal2-container) div:where(.swal2-popup) {
+    width: 90% !important;
+    padding: 1em !important;
+  }
+}
+
+/* KHUSUS UNTUK HP SANGAT KECIL (Galaxy Fold / iPhone SE) */
+@media only screen and (max-width: 380px) {
+  .site-header h1 {
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+  }
+  
+  .header-controls {
+    gap: 4px;
+  }
+}
+
