@@ -1230,3 +1230,68 @@ body.theme-transition * {
     filter: drop-shadow(0 0 6px rgba(52, 152, 219, 0.4));
   }
 }
+
+.facility-popup {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.facility-popup .facility-title {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 2px;
+  color: #3b2615;
+}
+
+.facility-popup .facility-category {
+  font-size: 13px;
+  color: #8b5e34;
+  margin-bottom: 4px;
+}
+
+.facility-popup .facility-tags {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* === PANEL SIMULASI GPS === */
+
+.gps-panel {
+  margin-top: 4px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #f7e5cf;
+  box-shadow: 0 0 0 1px rgba(181, 123, 73, 0.25);
+}
+
+.gps-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.gps-info {
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: #fdf5ea;
+  border: 1px dashed rgba(181, 123, 73, 0.45);
+}
+
+.gps-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.gps-row:last-child {
+  margin-bottom: 0;
+}
+
+.gps-label {
+  color: #8a5b35;
+}
+
+.gps-value {
+  font-weight: 600;
+  color: #4a301b;
+}
